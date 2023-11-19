@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {  
+        cursor: none;
+        background-color: #040c26;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .div {
+        height: 400px;
+        width: 766px;
+        border-radius: 18px;
+        border: 2px solid #fff;
+        overflow: auto;
+        resize: both;
+      }
+      .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(200, 83, 255);
+        border-radius: 50%;
+        pointer-events: none;
+        left: 50%;
+        top: 50%;
+      }
+      .content {
+        columns: 200px 2;
+        column-gap: 30px;
+        padding: 20px;
+        color:white;
+      }
+      .title {
+        column-span: all;
+        display: block;
+        color:white;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+    <div class="div">
+    
+      <div class="content" >
+          <div class="title">
+       <h1>This is a responsive column info reel</h1>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+        pariatur! Laborum quaerat voluptates asperiores. Consequuntur dolorum
+        facilis voluptatem quibusdam assumenda perferendis quam? Fuga impedit
+        expedita eveniet obcaecati dignissimos nobis deleniti.
+      </p>
+      <p style="padding-top: 15px;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+        pariatur! Laborum quaerat voluptates asperiores. Consequuntur dolorum
+        facilis voluptatem quibusdam assumenda perferendis quam? Fuga impedit
+        expedita eveniet obcaecati dignissimos nobis deleniti.
+      </p>
+    </div>
+    </div>
+    <script>
+      // JavaScript to move the curƒsor
+      document.addEventListener("mousemove", function (e) {
+        var cursor = document.querySelector(".custom-cursor");
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+    </script>
+  </body>
+</html>
